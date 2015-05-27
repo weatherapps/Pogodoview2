@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.root.pogodoview.Lokalizacja">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <EditText
+        android:id="@+id/lokalizacja"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/miejscowosc"
+        android:imeOptions="actionSearch"
+        android:textSize="22dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+
+        android:inputType="text">
+
+    <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/akceptacja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_zatwierdz"
+        android:layout_gravity="center_horizontal"
+        android:layout_toEndOf="@id/lokalizacja"
+        />
+
+
+    <ImageButton
+        android:id="@+id/locGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_gps"
+
+        android:layout_toEndOf="@id/akceptacja"
+        />
+
+    <TextView android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results"
+        android:layout_below="@id/lokalizacja"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="14dp"/>
+
+    <ListView android:id="@+id/cityList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt1"
+        android:layout_marginTop="3dp"/>
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt1"
+        android:visibility="gone" />
+</RelativeLayout>
+
+
+</LinearLayout>

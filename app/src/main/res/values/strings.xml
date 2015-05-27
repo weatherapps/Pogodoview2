@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Pogodoview</string>
+    <string name="powitanie">Witaj w Pogodoview!</string>
+    <string name="add_location">Wczytaj lokalizację</string>
+    <string name="next">Dalej</string>
+    <string name="title_activity_panel_glowny">PanelGlowny</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Idz_dalej">Lub przejdź, jeśli to nie Twój pierwszy raz...</string>
+    <string name="title_activity_lokalizacja">Lokalizacja</string>
+    <string name="wpisz_lokalizacje">Wpisz lokalizację</string>
+    <string name="miejscowosc">Miejscowość</string>
+    <string name="zatwierdz">Zatwierdź</string>
+    <string name="lokalizuj_automatycznie">Lokalizuj automatycznie</string>
+    <string name="title_activity_prognoza_biezaca">Prognoza bieżąca</string>
+    <string name="action_fresh">actionfrash</string>
+    <string name="tab_current" />
+    <string name="tab_forecast" />
+</resources>
