@@ -30,6 +30,11 @@
         android:label="@string/title_activity_prognoza_biezaca">
 
     </activity>
+        <activity
+            android:name=".PogodaViewPrzy"
+            android:label="pogoda przeszła">
+
+        </activity>
 </application>
 
 

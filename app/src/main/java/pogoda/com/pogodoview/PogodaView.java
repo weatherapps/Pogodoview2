@@ -30,31 +30,21 @@ public class PogodaView extends Activity implements FragmentPogodowy.WeatherEven
     private WeatherConfig config;
     private WeatherClient client;
     private List<Fragment> activeFragment = new ArrayList<Fragment>();
-    private int currentPos;
 
-    private MenuItem refreshItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-        requestWindowFeature(Window.FEATURE_PROGRESS);
+       // requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
+       // requestWindowFeature(Window.FEATURE_PROGRESS);
 
-        setContentView(R.layout.activity_prognoza_biezaca);
-
-
-        FragmentPogodowy f = (FragmentPogodowy) activeFragment.get(currentPos);
-        if (f != null)
-            f.refreshData();
+        setContentView(R.layout.main_activity);
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.setTransitionStyle(R.style.fragmentAnim);
-        PrognozaBiezaca cf = PrognozaBiezaca.newInstance();
-            ft.commit();
 
-        // Current weather
-        PrognozaBiezaca cwf = PrognozaBiezaca.newInstance();
-        activeFragment.add(cwf);
+        PrognozaBiezaca cf = PrognozaBiezaca.newInstance();
+        ft.add(R.id.currentWeatherFrag, cf, "currentWeather") ;
+        ft.commit();
 
 
 
@@ -62,11 +52,11 @@ public class PogodaView extends Activity implements FragmentPogodowy.WeatherEven
 
 
     }
-
     @Override
     protected void onStart() {
         super.onStart();
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -92,8 +82,17 @@ public class PogodaView extends Activity implements FragmentPogodowy.WeatherEven
     public void requestCompleted() {
 
     }
+
+
+
+
     public void aaaa(View view) {
         Intent intent = new Intent(this, Lokalizacja.class);
+        startActivity(intent);
+    }
+
+    public void Tygodniowa(View view) {
+        Intent intent = new Intent(this, PogodaViewPrzy.class);
         startActivity(intent);
     }
 }

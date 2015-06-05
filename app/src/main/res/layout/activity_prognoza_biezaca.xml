@@ -270,6 +270,13 @@
         android:layout_marginTop="12dp"
         android:layout_marginLeft="10dp"
         style="@style/textMalyPog"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Tygodniowa"
+        android:id="@+id/tygoniowa"
+        android:text="przyszłą"
+        android:layout_marginTop="320dp"/>
 
 
 </RelativeLayout>
