@@ -18,8 +18,6 @@ public class Powitanie extends ActionBarActivity {
         Intent intent = new Intent(this, Lokalizacja.class);
         startActivity(intent);
     }
-    public void Clic2(View view) {
-        Intent intent = new Intent(this, PogodaView.class);
-        startActivity(intent);
-    }
+
+
 }

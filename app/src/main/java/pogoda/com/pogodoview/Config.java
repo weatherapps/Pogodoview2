@@ -8,3 +8,5 @@ public class Config {
     public static final boolean DEBUG = true;
 
 }
+//android:layout_toEndOf="@id/akceptacja"
+//        android:layout_toEndOf="@id/lokalizacja"

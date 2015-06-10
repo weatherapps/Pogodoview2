@@ -17,4 +17,13 @@
     <string name="action_fresh">actionfrash</string>
     <string name="tab_current" />
     <string name="tab_forecast" />
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="title_section1">Na dziś</string>
+    <string name="title_section2">Na przyszłość</string>
+    <string name="title_section3">Mapa</string>
+    <string name="action_refresh">refresh</string>
+    <string name="tekst_przycisku_tab1">Lokalizacja</string>
+    <string name="wyniki_wyszukiwania">Wyniki: </string>
+    <string name="usterka">Usterka</string>
 </resources>
