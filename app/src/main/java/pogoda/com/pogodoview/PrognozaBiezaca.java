@@ -73,22 +73,22 @@ public class PrognozaBiezaca extends FragmentPogodowy {
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.activity_prognoza_biezaca, container, false);
-//        cityText = (TextView) v.findViewById(R.id.location);
-//        temp = (TextView) v.findViewById(R.id.temp);
-//        condDescr = (TextView) v.findViewById(R.id.descrWeather);
-//        imgView = (ImageView) v.findViewById(R.id.imgWeather);
-//        hum = (TextView) v.findViewById(R.id.humidity);
-//        press = (TextView) v.findViewById(R.id.pressure);
-//        windSpeed = (TextView) v.findViewById(R.id.windSpeed);
-//        windDeg = (TextView) v.findViewById(R.id.windDeg);
-//        tempMin = (TextView) v.findViewById(R.id.tempMin);
-//        tempMax = (TextView) v.findViewById(R.id.tempMax);
-//        unitTemp = (TextView) v.findViewById(R.id.tempUnit);
-//        sunrise = (TextView) v.findViewById(R.id.sunrise);
-//        sunset = (TextView) v.findViewById(R.id.sunset);
-//        cloud = (TextView) v.findViewById(R.id.cloud);
-//        colorTextLine = (TextView) v.findViewById(R.id.lineTxt);
-//        rain = (TextView) v.findViewById(R.id.rain);
+        cityText = (TextView) v.findViewById(R.id.location);
+        temp = (TextView) v.findViewById(R.id.temp);
+        condDescr = (TextView) v.findViewById(R.id.descrWeather);
+        imgView = (ImageView) v.findViewById(R.id.imgWeather);
+        hum = (TextView) v.findViewById(R.id.humidity);
+        press = (TextView) v.findViewById(R.id.pressure);
+        windSpeed = (TextView) v.findViewById(R.id.windSpeed);
+        windDeg = (TextView) v.findViewById(R.id.windDeg);
+        tempMin = (TextView) v.findViewById(R.id.tempMin);
+        tempMax = (TextView) v.findViewById(R.id.tempMax);
+        unitTemp = (TextView) v.findViewById(R.id.tempUnit);
+        sunrise = (TextView) v.findViewById(R.id.sunrise);
+        sunset = (TextView) v.findViewById(R.id.sunset);
+        cloud = (TextView) v.findViewById(R.id.cloud);
+        colorTextLine = (TextView) v.findViewById(R.id.lineTxt);
+        rain = (TextView) v.findViewById(R.id.rain);
         return v;
     }
 
