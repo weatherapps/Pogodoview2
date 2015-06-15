@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.survivingwithandroid.weather.lib.WeatherClient;
 import com.survivingwithandroid.weather.lib.WeatherConfig;
@@ -228,9 +229,12 @@ android.app.FragmentTransaction fragmentTransaction;
 
 
     }
+;
 
     public void aaaa(View view) {
+
         Intent intent = new Intent(this, Lokalizacja.class);
+
         startActivity(intent);
     }
 

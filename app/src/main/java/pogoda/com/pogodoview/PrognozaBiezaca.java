@@ -75,7 +75,7 @@ public class PrognozaBiezaca extends FragmentPogodowy {
         View v = inflater.inflate(R.layout.activity_prognoza_biezaca, container, false);
         cityText = (TextView) v.findViewById(R.id.location);
         temp = (TextView) v.findViewById(R.id.temp);
-        condDescr = (TextView) v.findViewById(R.id.descrWeather);
+       condDescr = (TextView) v.findViewById(R.id.descrWeather);
         imgView = (ImageView) v.findViewById(R.id.imgWeather);
         hum = (TextView) v.findViewById(R.id.humidity);
         press = (TextView) v.findViewById(R.id.pressure);
@@ -87,7 +87,7 @@ public class PrognozaBiezaca extends FragmentPogodowy {
         sunrise = (TextView) v.findViewById(R.id.sunrise);
         sunset = (TextView) v.findViewById(R.id.sunset);
         cloud = (TextView) v.findViewById(R.id.cloud);
-        colorTextLine = (TextView) v.findViewById(R.id.lineTxt);
+        //colorTextLine = (TextView) v.findViewById(R.id.lineTxt);
         rain = (TextView) v.findViewById(R.id.rain);
         return v;
     }
@@ -126,8 +126,15 @@ public class PrognozaBiezaca extends FragmentPogodowy {
 
 
         weatherClient.updateWeatherConfig(config);
+       // tempMin.setText(weather.temperature.getMinTemp() + cWeather.getUnit().tempUnit);
+
+        Log.d("Swa", "temptemp [" + tempMin + "]");
 
         weatherClient.getCurrentCondition(cityId, new WeatherClient.WeatherEventListener() {
+
+
+
+
             @Override
             public void onWeatherRetrieved(CurrentWeather cWeather) {
                 Weather weather = cWeather.weather;
@@ -141,16 +148,18 @@ public class PrognozaBiezaca extends FragmentPogodowy {
                 //colorTextLine.setBackgroundResource(WeatherUtil.getResource(weather.temperature.getTemp(), config));
                 hum.setText(weather.currentCondition.getHumidity() + "%");
                 tempMin.setText(weather.temperature.getMinTemp() + cWeather.getUnit().tempUnit);
+                Log.d("Swa", "temptemp [" + tempMin + "]");
+
                 tempMax.setText(weather.temperature.getMaxTemp() + cWeather.getUnit().tempUnit);
                 windSpeed.setText(weather.wind.getSpeed() + cWeather.getUnit().speedUnit);
                 windDeg.setText((int) weather.wind.getDeg() + "° (" + WindDirection.getDir((int) weather.wind.getDeg()) + ")");
-                press.setText(weather.currentCondition.getPressure() + cWeather.getUnit().pressureUnit);
+               press.setText(weather.currentCondition.getPressure() + cWeather.getUnit().pressureUnit);
 
-               // sunrise.setText(WeatherUtil.convertDate(weather.location.getSunrise()));
+               sunrise.setText(WeatherUnits.convertDate(weather.location.getSunrise()));
 
-                 // sunset.setText(WeatherUtil.convertDate(weather.location.getSunset()));
+                  sunset.setText(WeatherUnits.convertDate(weather.location.getSunset()));
 
-                // imgView.setImageResource(WeatherIconMapper.getWeatherResource(weather.currentCondition.getIcon(), weather.currentCondition.getWeatherId()));
+                 imgView.setImageResource(IconsWeather.getWeatherResource(weather.currentCondition.getIcon(), weather.currentCondition.getWeatherId()));
 
                 /*
                 client.getDefaultProviderImage(weather.currentCondition.getIcon(), new WeatherClient.WeatherImageListener() {
@@ -159,13 +168,13 @@ public class PrognozaBiezaca extends FragmentPogodowy {
                         imgView.setImageBitmap(image);
                     }
                 });
-                */
+                    */
                 cloud.setText(weather.clouds.getPerc() + "%");
 
                 if (weather.rain[0].getTime() != null && weather.rain[0].getAmmount() != 0)
                     rain.setText(weather.rain[0].getTime() + ":" + weather.rain[0].getAmmount());
                 else
-                    rain.setText("----");
+      rain.setText("----");
 
             }
 

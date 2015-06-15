@@ -19,6 +19,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import pogoda.com.pogodoview.IconsWeather;
 import pogoda.com.pogodoview.R;
 
 /**
@@ -61,9 +62,9 @@ public class AdapterPogody extends ArrayAdapter<DayForecast> {
         ImageView icon = (ImageView) convertView.findViewById(R.id.dayIcon);
         TextView minTempText = (TextView) convertView.findViewById(R.id.dayTempMin);
         TextView maxTempText = (TextView) convertView.findViewById(R.id.dayTempMax);
-        TextView dayCloud = (TextView) convertView.findViewById(R.id.dayCloud);
-        TextView dayDescr = (TextView) convertView.findViewById(R.id.dayDescr);
-        TextView dayRain = (TextView) convertView.findViewById(R.id.dayRain);
+        //TextView dayCloud = (TextView) convertView.findViewById(R.id.dayCloud);
+        //TextView dayDescr = (TextView) convertView.findViewById(R.id.dayDescr);
+        //TextView dayRain = (TextView) convertView.findViewById(R.id.dayRain);
 
         DayForecast forecast = dayForecastList.get(position);
         Date d = new Date();
@@ -73,18 +74,14 @@ public class AdapterPogody extends ArrayAdapter<DayForecast> {
         dayText.setText(sdfDay.format(gc.getTime()));
         dayDate.setText(sdfMonth.format(gc.getTime()));
 
-       // icon.setImageResource(WeatherIconMapper.getWeatherResource(forecast.weather.currentCondition.getIcon(), forecast.weather.currentCondition.getWeatherId()));
+        icon.setImageResource(IconsWeather.getWeatherResource(forecast.weather.currentCondition.getIcon(), forecast.weather.currentCondition.getWeatherId()));
         Log.d("SwA", "Min [" + minTempText + "]");
 
         minTempText.setText( Math.round(forecast.forecastTemp.min) + units.tempUnit);
         maxTempText.setText( Math.round(forecast.forecastTemp.max) + units.tempUnit);
-        dayCloud.setText("" + forecast.weather.clouds.getPerc() + "%");
-        dayDescr.setText(forecast.weather.currentCondition.getDescr());
-        try {
-            float rainVal = forecast.weather.rain[0].getAmmount();
-            dayRain.setText("Rain:" + String.valueOf((int) rainVal));
-        }
-        catch(Throwable t) {}
+        //dayCloud.setText("" + forecast.weather.clouds.getPerc() + "%");
+        //dayDescr.setText(forecast.weather.currentCondition.getDescr());
+
         return convertView;
     }
 

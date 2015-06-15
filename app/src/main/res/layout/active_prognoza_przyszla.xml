@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<android.support.v7.widget.CardView
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    card:contentPadding="5dp"
+    card:cardUseCompatPadding="true"
+    android:layout_margin="15dp"
+    xmlns:card="http://schemas.android.com/apk/res-auto">
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="@dimen/weatherRow.height"
-        android:background="#FFBF00"
-        android:layout_marginTop="15dp">
+        android:orientation="vertical">
+
+    >
+
 
         <TextView android:id="@+id/dayName"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:paddingLeft="5dp"
-            style="@style/dayText"
+                        style="@style/dayText"
             />
         <TextView android:id="@+id/dayDate"
             android:layout_height="wrap_content"
@@ -26,52 +35,29 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_centerInParent="true"
+            android:text="sasasa"
+
             />
 
         <TextView android:id="@+id/dayTempMin"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="7dp"
 
-
-            android:layout_toRightOf="@id/dayIcon"
+            android:text="sasasa"
             style="@style/infoTempMinText"
             />
         <TextView android:id="@+id/dayTempMax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/dayTempMin"
+            android:text="sasasa"
+
             android:paddingRight="5dp"
             style="@style/infoTempMaxText"
             />
 
-        <TextView android:id="@+id/dayRain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/dayTempMin"
-
-            android:layout_toRightOf="@id/dayIcon"
-            style="@style/infoText"
-            />
 
 
-
-        <TextView android:id="@+id/dayCloud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="5dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            style="@style/infoText"
-            />
-
-        <TextView android:id="@+id/dayDescr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="5dp"
-            android:layout_toLeftOf="@id/dayCloud"
-            android:layout_centerVertical="true"
-            style="@style/infoText"
-            />
 
     </RelativeLayout>
+    </android.support.v7.widget.CardView>

@@ -6,7 +6,10 @@ import com.survivingwithandroid.weather.lib.WeatherClient;
 import com.survivingwithandroid.weather.lib.WeatherConfig;
 import com.survivingwithandroid.weather.lib.client.volley.WeatherClientDefault;
 import com.survivingwithandroid.weather.lib.exception.WeatherProviderInstantiationException;
+import com.survivingwithandroid.weather.lib.provider.IProviderType;
 import com.survivingwithandroid.weather.lib.provider.openweathermap.OpenweathermapProviderType;
+import com.survivingwithandroid.weather.lib.provider.wunderground.WeatherUndergroundProviderType;
+import com.survivingwithandroid.weather.lib.provider.yahooweather.YahooWeatherProvider;
 
 /**
  * Created by damian on 15.05.15.
@@ -32,7 +35,7 @@ public class PogodaSerwUstawienia {
             client = new WeatherClient.ClientBuilder()
                     .attach(ctx)
                     .config(new WeatherConfig())
-                    .provider(new OpenweathermapProviderType())
+                    .provider( new OpenweathermapProviderType())
                     .httpClient(WeatherClientDefault.class)
                     .build();
         }

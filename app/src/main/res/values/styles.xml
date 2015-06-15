@@ -8,7 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="textBig">tempBig</style>
+    <style name="textBig">tempBig
+    <item name="android:textSize">80dp</item>
+    </style>
 
     <style name="textMalyPog"></style>
 
