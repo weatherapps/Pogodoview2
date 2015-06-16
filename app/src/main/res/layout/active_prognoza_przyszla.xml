@@ -15,21 +15,16 @@
         android:orientation="horizontal"
         android:id="@+id/aaa">
 
-
-
-
         <TextView android:id="@+id/dayName"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:paddingLeft="5dp"
-            android:text="name"
             style="@style/dayText"
             />
         <TextView android:id="@+id/dayTempMin"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5"
             android:layout_alignLeft="@+id/dayTempMax"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
@@ -39,14 +34,9 @@
         <TextView android:id="@+id/dayTempMax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:paddingLeft="50dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:text="10"
-
-
-
             style="@style/infoTempMaxText"
             />
 
@@ -56,7 +46,6 @@
             style="@style/infoTempMaxText"
             android:paddingTop="20dp"
             android:layout_gravity="left"
-
             android:paddingLeft="5dp"
             android:text="data"
             />
@@ -66,8 +55,6 @@
             android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:paddingRight="5dp"
-
-
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
