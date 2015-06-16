@@ -75,7 +75,7 @@ public class PrognozaBiezaca extends FragmentPogodowy {
         View v = inflater.inflate(R.layout.activity_prognoza_biezaca, container, false);
         cityText = (TextView) v.findViewById(R.id.location);
         temp = (TextView) v.findViewById(R.id.temp);
-       condDescr = (TextView) v.findViewById(R.id.descrWeather);
+       //condDescr = (TextView) v.findViewById(R.id.descrWeather);
         imgView = (ImageView) v.findViewById(R.id.imgWeather);
         hum = (TextView) v.findViewById(R.id.humidity);
         press = (TextView) v.findViewById(R.id.pressure);
@@ -140,7 +140,7 @@ public class PrognozaBiezaca extends FragmentPogodowy {
                 Weather weather = cWeather.weather;
                 getListener().requestCompleted();
                 cityText.setText(weather.location.getCity() + "," + weather.location.getCountry());
-                condDescr.setText(weather.currentCondition.getCondition() + "(" + weather.currentCondition.getDescr() + ")");
+                //condDescr.setText(weather.currentCondition.getCondition() + "(" + weather.currentCondition.getDescr() + ")");
                 LogUtils.LOGD("SwA", "Temp [" + temp + "]");
                 LogUtils.LOGD("SwA", "Val [" + weather.temperature.getTemp() + "]");
                 temp.setText("" + ((int) weather.temperature.getTemp()));
