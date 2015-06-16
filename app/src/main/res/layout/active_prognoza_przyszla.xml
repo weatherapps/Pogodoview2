@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     card:contentPadding="5dp"
     card:cardUseCompatPadding="true"
@@ -10,53 +10,66 @@
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="@dimen/weatherRow.height"
-        android:orientation="vertical">
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:id="@+id/aaa">
 
-    >
+
 
 
         <TextView android:id="@+id/dayName"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:paddingLeft="5dp"
-                        style="@style/dayText"
+            android:text="name"
+            style="@style/dayText"
             />
-        <TextView android:id="@+id/dayDate"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            style="@style/infoTempMaxText"
-            android:layout_below="@id/dayName"
-            android:layout_alignParentLeft="true"
-            android:paddingLeft="5dp"
-            />
-
-
-        <ImageView android:id="@+id/dayIcon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_centerInParent="true"
-            android:text="sasasa"
-
-            />
-
         <TextView android:id="@+id/dayTempMin"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="sasasa"
+            android:text="5"
+            android:layout_alignLeft="@+id/dayTempMax"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
             style="@style/infoTempMinText"
             />
+
         <TextView android:id="@+id/dayTempMax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sasasa"
 
-            android:paddingRight="5dp"
+            android:paddingLeft="50dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="10"
+
+
+
             style="@style/infoTempMaxText"
             />
 
+        <TextView android:id="@+id/dayDate"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/infoTempMaxText"
+            android:paddingTop="20dp"
+            android:layout_gravity="left"
 
+            android:paddingLeft="5dp"
+            android:text="data"
+            />
+
+        <ImageView android:id="@+id/dayIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:paddingRight="5dp"
+
+
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
 
     </RelativeLayout>
