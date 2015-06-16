@@ -55,16 +55,14 @@ public class AdapterPogody extends ArrayAdapter<DayForecast> {
           convertView = inflater.inflate(R.layout.active_prognoza_przyszla, parent, false);
         }
 
-        // We need to apply holder pattern
+
 
         TextView dayText = (TextView) convertView.findViewById(R.id.dayName);
         TextView dayDate = (TextView) convertView.findViewById(R.id.dayDate);
         ImageView icon = (ImageView) convertView.findViewById(R.id.dayIcon);
         TextView minTempText = (TextView) convertView.findViewById(R.id.dayTempMin);
         TextView maxTempText = (TextView) convertView.findViewById(R.id.dayTempMax);
-        //TextView dayCloud = (TextView) convertView.findViewById(R.id.dayCloud);
-        //TextView dayDescr = (TextView) convertView.findViewById(R.id.dayDescr);
-        //TextView dayRain = (TextView) convertView.findViewById(R.id.dayRain);
+
 
         DayForecast forecast = dayForecastList.get(position);
         Date d = new Date();
@@ -79,8 +77,7 @@ public class AdapterPogody extends ArrayAdapter<DayForecast> {
 
         minTempText.setText( Math.round(forecast.forecastTemp.min) + units.tempUnit);
         maxTempText.setText( Math.round(forecast.forecastTemp.max) + units.tempUnit);
-        //dayCloud.setText("" + forecast.weather.clouds.getPerc() + "%");
-        //dayDescr.setText(forecast.weather.currentCondition.getDescr());
+
 
         return convertView;
     }

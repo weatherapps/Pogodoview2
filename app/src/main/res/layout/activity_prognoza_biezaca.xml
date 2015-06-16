@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:id="@+id/przycisk_miejscowosci"
-
             android:onClick="aaaa"/>
 
 
@@ -206,6 +205,7 @@
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/windDeg"
         android:layout_alignBaseline="@id/windIcon"
+        android:layout_marginLeft="40dp"
         />
 
     <TextView
@@ -225,6 +225,7 @@
         android:layout_below="@id/sunIcon"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/windDeg"
+        android:layout_marginLeft="40dp"
         android:layout_alignBaseline="@id/humidityIcon"/>
     <TextView
         android:layout_width="wrap_content"
@@ -246,6 +247,7 @@
         android:layout_below="@id/moonIcon"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/windDeg"
+        android:layout_marginLeft="40dp"
         android:layout_alignBaseline="@id/windIcon"
         />
     <TextView
