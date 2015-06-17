@@ -26,4 +26,5 @@ dependencies {
     compile 'com.survivingwithandroid:weatherlib_volleyclient:1.5.8'
     compile 'com.mcxiaoke.volley:library:1.0.6@aar'
     compile 'com.android.support:cardview-v7:22.1.1'
+    compile 'com.google.android.gms:play-services:7.3.0'
 }

@@ -26,4 +26,5 @@
     <string name="tekst_przycisku_tab1">Lokalizacja</string>
     <string name="wyniki_wyszukiwania">Wyniki: </string>
     <string name="usterka">Usterka</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
