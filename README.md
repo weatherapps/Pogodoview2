@@ -27,5 +27,7 @@ Na szczescie jest aplikacja Pogodoview, ktora dostarczy Ci wszystkich niezbednyc
 
 ## Przewidywany wyglad
 
-![screen1](http://imageshack.com/a/img538/1701/Azmzp8.png)
-![screen2](http://imageshack.com/a/img908/8286/wpe2Fq.png)
+![screen1](http://s3.ifotos.pl/img/Screensho_wsawrhp.png)
+![screen2](http://s2.ifotos.pl/img/Screensho_wsawrhe.png)
+![screen3](http://s5.ifotos.pl/img/Screensho_wsawrhw.png)
+![screen4](http://s10.ifotos.pl/img/Screensho_wsawrha.png)
