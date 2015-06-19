@@ -110,12 +110,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         if (id == R.id.action_settings) {
             return true;
         }
-        else if (id == R.id.action_refresh) {
 
-
-
-            Log.d("SwA", "1111 ");
-        }
 
         return super.onOptionsItemSelected(item);
     }

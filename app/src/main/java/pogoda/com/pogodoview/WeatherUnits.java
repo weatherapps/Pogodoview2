@@ -30,22 +30,7 @@ import java.util.Locale;
  */
 public class WeatherUnits {
 
- /*    public static int getResource(float val, WeatherConfig config) {
-        float temp = val;
-       if (!WeatherUtility.isMetric(config.unitSystem))
-           temp = UnitUtility.toCelcius(val);
 
-        int resId = 0;
-        if (temp < 10)
-            resId = R.drawable.line_shape_blue;
-        else if (temp >= 10 && temp <=24)
-            resId = R.drawable.line_shape_green;
-        else if (temp > 25)
-            resId = R.drawable.line_shape_red;
-        return null;
-
-    }
-*/
 
     public static String getLanguage(String val) {
         if (val == null)

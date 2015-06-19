@@ -25,24 +25,43 @@ import com.survivingwithandroid.weather.lib.util.WindDirection;
 public class PrognozaBiezaca extends FragmentPogodowy {
 
 
-
-
-   // protected WeatherClient weatherClient;
-
+    // protected WeatherClient weatherClient;
 
 
 
+    public void PrognozaBiezaca() {}
 
 
     private SharedPreferences preferencje;
 
-    private TextView cityText;
-    private TextView condDescr;
-    private TextView temp;
-    private TextView press;
+    public TextView cityText;
+
+    public void setTemp(TextView temp) {
+        this.temp = temp;
+    }
+
+    public void setCityText(TextView cityText) {
+        this.cityText = cityText;
+    }
+
+    public TextView temp;
+    public TextView press;
     private TextView windSpeed;
     private TextView windDeg;
-    private TextView unitTemp;
+
+    public TextView getUnitTemp() {
+        return unitTemp;
+    }
+
+    public TextView getCityText() {
+        return cityText;
+    }
+
+    public TextView getTemp() {
+        return temp;
+    }
+
+    public TextView unitTemp;
     private TextView hum;
     private ImageView imgView;
     private TextView tempMin;
@@ -50,10 +69,16 @@ public class PrognozaBiezaca extends FragmentPogodowy {
     private TextView sunset;
     private TextView sunrise;
     private TextView cloud;
-    private TextView colorTextLine;
     private TextView rain;
 
     private WeatherConfig config;
+
+    public void PrognozaBiezaca(TextView cityText,TextView temp) {
+        this.cityText = cityText;
+        this.temp=temp;
+
+    }
+
 
     public static PrognozaBiezaca newInstance() {
         PrognozaBiezaca fragment = new PrognozaBiezaca();
@@ -75,7 +100,6 @@ public class PrognozaBiezaca extends FragmentPogodowy {
         View v = inflater.inflate(R.layout.activity_prognoza_biezaca, container, false);
         cityText = (TextView) v.findViewById(R.id.location);
         temp = (TextView) v.findViewById(R.id.temp);
-       //condDescr = (TextView) v.findViewById(R.id.descrWeather);
         imgView = (ImageView) v.findViewById(R.id.imgWeather);
         hum = (TextView) v.findViewById(R.id.humidity);
         press = (TextView) v.findViewById(R.id.pressure);
@@ -87,7 +111,6 @@ public class PrognozaBiezaca extends FragmentPogodowy {
         sunrise = (TextView) v.findViewById(R.id.sunrise);
         sunset = (TextView) v.findViewById(R.id.sunset);
         cloud = (TextView) v.findViewById(R.id.cloud);
-        //colorTextLine = (TextView) v.findViewById(R.id.lineTxt);
         rain = (TextView) v.findViewById(R.id.rain);
         return v;
     }
@@ -101,6 +124,7 @@ public class PrognozaBiezaca extends FragmentPogodowy {
 
 
     public void refreshData() {
+
         refresh();
     }
 
@@ -114,7 +138,7 @@ public class PrognozaBiezaca extends FragmentPogodowy {
             return;
         }
 
-        // config.lang = WeatherUtil.getLanguage(prefs.getString("swa_lang", "en"));
+
         config.maxResult = 7;
         config.numDays = 7;
 
@@ -126,7 +150,7 @@ public class PrognozaBiezaca extends FragmentPogodowy {
 
 
         weatherClient.updateWeatherConfig(config);
-       // tempMin.setText(weather.temperature.getMinTemp() + cWeather.getUnit().tempUnit);
+
 
         Log.d("Swa", "temptemp [" + tempMin + "]");
 
@@ -140,12 +164,10 @@ public class PrognozaBiezaca extends FragmentPogodowy {
                 Weather weather = cWeather.weather;
                 getListener().requestCompleted();
                 cityText.setText(weather.location.getCity() + "," + weather.location.getCountry());
-                //condDescr.setText(weather.currentCondition.getCondition() + "(" + weather.currentCondition.getDescr() + ")");
                 LogUtils.LOGD("SwA", "Temp [" + temp + "]");
                 LogUtils.LOGD("SwA", "Val [" + weather.temperature.getTemp() + "]");
                 temp.setText("" + ((int) weather.temperature.getTemp()));
                 unitTemp.setText(cWeather.getUnit().tempUnit);
-                //colorTextLine.setBackgroundResource(WeatherUtil.getResource(weather.temperature.getTemp(), config));
                 hum.setText(weather.currentCondition.getHumidity() + "%");
                 tempMin.setText(weather.temperature.getMinTemp() + cWeather.getUnit().tempUnit);
                 Log.d("Swa", "temptemp [" + tempMin + "]");
@@ -153,40 +175,26 @@ public class PrognozaBiezaca extends FragmentPogodowy {
                 tempMax.setText(weather.temperature.getMaxTemp() + cWeather.getUnit().tempUnit);
                 windSpeed.setText(weather.wind.getSpeed() + cWeather.getUnit().speedUnit);
                 windDeg.setText((int) weather.wind.getDeg() + "° (" + WindDirection.getDir((int) weather.wind.getDeg()) + ")");
-               press.setText(weather.currentCondition.getPressure() + cWeather.getUnit().pressureUnit);
+                press.setText(weather.currentCondition.getPressure() + cWeather.getUnit().pressureUnit);
+                sunrise.setText(WeatherUnits.convertDate(weather.location.getSunrise()));
+                sunset.setText(WeatherUnits.convertDate(weather.location.getSunset()));
+                imgView.setImageResource(IconsWeather.getWeatherResource(weather.currentCondition.getIcon(), weather.currentCondition.getWeatherId()));
 
-               sunrise.setText(WeatherUnits.convertDate(weather.location.getSunrise()));
-
-                  sunset.setText(WeatherUnits.convertDate(weather.location.getSunset()));
-
-                 imgView.setImageResource(IconsWeather.getWeatherResource(weather.currentCondition.getIcon(), weather.currentCondition.getWeatherId()));
-
-                /*
-                client.getDefaultProviderImage(weather.currentCondition.getIcon(), new WeatherClient.WeatherImageListener() {
-                    @Override
-                    public void onImageReady(Bitmap image) {
-                        imgView.setImageBitmap(image);
-                    }
-                });
-                    */
                 cloud.setText(weather.clouds.getPerc() + "%");
-
                 if (weather.rain[0].getTime() != null && weather.rain[0].getAmmount() != 0)
                     rain.setText(weather.rain[0].getTime() + ":" + weather.rain[0].getAmmount());
                 else
-      rain.setText("----");
+                rain.setText("----");
 
             }
 
             @Override
             public void onWeatherError(WeatherLibException t) {
-                //WeatherDialog.createErrorDialog("Error parsing data. Please try again", MainActivity.this);
                  getListener().requestCompleted();
             }
 
             @Override
             public void onConnectionError(Throwable t) {
-                //WeatherDialog.createErrorDialog("Error parsing data. Please try again", MainActivity.this);
                 getListener().requestCompleted();
             }
         });

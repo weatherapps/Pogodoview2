@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin" android:background="#09C">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textBig"
+    android:text="dadsads"
+        android:id="@+id/temeratura"
+        />
+    <ImageView
+        android:layout_width="@dimen/weatherMainIcon.width"
+        android:layout_height="@dimen/weatherMainIcon.height"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/imgWeather"
+        android:layout_toRightOf="@id/temp"
+        android:layout_alignTop="@id/temp"
+
+        android:padding="4dp"/>
+
+</RelativeLayout>

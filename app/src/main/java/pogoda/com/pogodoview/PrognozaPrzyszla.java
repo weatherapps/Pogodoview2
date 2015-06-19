@@ -80,7 +80,6 @@ public class PrognozaPrzyszla extends FragmentPogodowy {
 
             @Override
             public void onConnectionError(Throwable t) {
-                //WeatherDialog.createErrorDialog("Error parsing data. Please try again", MainActivity.this);
             }
         });
     }
