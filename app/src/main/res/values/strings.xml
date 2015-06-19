@@ -19,8 +19,8 @@
     <string name="tab_forecast" />
     <string name="title_activity_main">MainActivity</string>
 
-    <string name="title_section1">Na dziś</string>
-    <string name="title_section2">Na przyszłość</string>
+    <string name="title_section1">Dzisiaj</string>
+    <string name="title_section2">Przyszła</string>
     <string name="title_section3">Mapa</string>
     <string name="action_refresh">refresh</string>
     <string name="tekst_przycisku_tab1">Lokalizacja</string>

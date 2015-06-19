@@ -41,13 +41,51 @@ public class Maps extends Fragment {
         }
 
         googleMap = mMapView.getMap();
-        // latitude and longitude
-        double latitude = 17.385044;
-        double longitude = 78.486671;
+        googleMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+        googleMap.setMyLocationEnabled(true);
 
-        // create marker
-        MarkerOptions marker = new MarkerOptions().position(
-                new LatLng(latitude, longitude)).title("Hello Maps");
+        googleMap.getUiSettings().setZoomGesturesEnabled(false);
+        googleMap.getUiSettings().setMapToolbarEnabled(false);
+        googleMap.getUiSettings().setMyLocationButtonEnabled(false); //Przycisk lokalizacji
+
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52, 19.1), 5.6f)); //center na Polskę
+
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(52.25, 21))
+                .title("Warszawa")
+                .snippet("Aktualna pogoda: brak danych")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(54.1, 22.9))
+                .title("Suwalki")
+                .snippet("Aktualna pogoda: brak danych")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(54.3, 18.7))
+                .title("Gdansk")
+                .snippet("Aktualna pogoda: brak danych")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(53.4, 14.5))
+                .title("Szczecin")
+                .snippet("Aktualna pogoda: brak danych")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(50.1, 22))
+                .title("Rzeszow")
+                .snippet("Aktualna pogoda: brak danych")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(52.4, 16.9))
+                .title("Poznan")
+                .snippet("Aktualna pogoda: brak danych")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(50.3, 19))
+                .title("Katowice")
+                .snippet("Aktualna pogoda: brak danych")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
 
 
 

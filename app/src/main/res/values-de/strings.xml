@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pogodoview</string>
+    <string name="zatwierdz">Einreichen</string>
+    <string name="wyniki_wyszukiwania">Ergebnisse:</string>
+    <string name="wpisz_lokalizacje">Geben Sie Standort</string>
+    <string name="title_section3">Karte</string>
+    <string name="title_section2">Zukunft</string>
+    <string name="title_section1">Heute</string>
+    <string name="title_activity_prognoza_biezaca">Aktuelles Wetter</string>
+    <string name="next">Nächster</string>
+    <string name="miejscowosc">Lage</string>
+    <string name="action_refresh">Erfrischen</string>
+    <string name="action_settings">Einstellungen</string>
+</resources>
