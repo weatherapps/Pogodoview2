@@ -6,16 +6,21 @@ Ale co jest? O nie, okno jest tak daleko...
 Na szczescie jest aplikacja Pogodoview, ktora dostarczy Ci wszystkich niezbednych informacji.
 
 
-## Aplikacja udostepnia informacje o
-* temperaturze
-* siłe wiatru
+## Aplikacja udostepnia informacje
+* temperata min/max
+* siła wiatru oraz kierunek
 * rodzaju pogody: słonecznie/opad deszczu, śniegu/pochmurno/
-...
+* wilgotność
+* ciśnienie
+* wschód słońca
+* zachód słońca
+* opady
+
 
 ## Wybór obszaru/miejscowości
 * GPS
 * wpisanie miejscowości
-* odbiornika sieci
+
 
 ## Zasada działanie aplikacji
 
